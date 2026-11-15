@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>欢迎欢迎</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      h1 {
+        animation-name: rainbow;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      h1, p {
+        margin: 0.8rem 0;
+      }
+      @keyframes rainbow {
+        0% { color: #ff0000; }
+        17% { color: #ffff00; }
+        33% { color: #00ff00; }
+        50% { color: #00ffff; }
+        67% { color: #0000ff; }
+        83% { color: #ff00ff; }
+        100% { color: #ff0000; }
+      }
+   
+     </style>
+  </head>
+  
+    <body><main>
+      <h1>欢迎来到我的网页搬运站</h1>
+      <p>绝对真材实料</p>
+      <p>目前有13个网站</p>
+      <p>可自行前往</p>
+      <p><button class="clickme">快点我!</button></p>
+      <p>前往的方式为在xxx.com/1至13/index.html就可以浏览了!!!</p>
+      <input type="text" class="input" value="测试!"> <button class="send">发送给作者!</button>
+      <p class="received"></p>
+    </main>
+    <script>
+      let clicks = 0;
+      document.querySelector(".clickme").addEventListener("click", (e) => {
+        clicks++;
+        e.target.textContent = `Clicks: ${clicks}`;
+      });
+
+      document.querySelector(".send").addEventListener("click", (e) => {
+        const message = document.querySelector(".input").value;
+        document.querySelector(".input").value = "";
+        window.parent.postMessage(message, "*");
+      });
+
+      window.addEventListener("message", (e) => {
+        if (e.source === window.parent && e.source !== window) {
+          document.querySelector(".received").textContent = `Last message received by iframe: ${e.data}`;
+        }
+      });
+    </script>
+  
+
+</body></html>
