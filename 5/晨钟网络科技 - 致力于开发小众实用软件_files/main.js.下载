@@ -1,0 +1,68 @@
+// addScript('https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js');
+// addScript('https://cdn.bootcdn.net/ajax/libs/layer/3.5.1/layer.min.js');
+addScript('https://lib.baomitu.com/jquery/3.6.0/jquery.js');
+addScript('https://lib.baomitu.com/layer/3.1.1/layer.min.js');
+// <script src=""></script>
+
+function addScript(url){
+	document.write("<script src="+url+"></script>");
+}
+var checkNum=0;
+function ExtCode()	{	
+	layer.alert('<a style="font-size:18px;font-weight:Bold">【蓝奏云】</a><br>必须将浏览器UA改为电脑才能不限速下载APK文件，否则会要求充会员！<br><br><a style="font-size:18px;font-weight:Bold">【城通盘】</a><br>无需修改UA直接下载，但会限速。', {
+	title:"请选择网盘",
+	closeBtn:0,
+	shade:0.7,
+	btn:["城通盘","蓝奏云"],
+	btn2:function(){
+	layer.alert('密码：点赞投币',{
+	title:"提示",
+
+	yes:function(){
+	window.open("https://cz-jam.lanzouw.com/b02k5fmqbi"); 
+	layer.closeAll();
+	}
+
+	},
+
+	);
+	},
+	yes:function(){
+	    window.open("http://download.jamcz.com/d/29434354-43505884-32e560");
+	    
+	},
+	});
+
+	}
+    
+     
+
+    function subpages(ur)	{	
+    	window.location.href=ur;
+    	  }
+    function newpages(ur)	{	
+                window.open(ur);
+                      }				 
+	function subpages10(ur)	{	
+	var conf;
+	conf=confirm("使用前记得先备份注册表，以防出现奇怪的bug。修复后一定要重启电脑才能生效。 \n\n提取码 5911，记得关注~。");
+	if(conf) 
+	window.location.href="https://url68.ctfile.com/f/22501768-517256183-33dabf";
+	  }
+	  
+	  function CheckVal(){
+	      checkNum+=1;
+	      if(checkNum==7){
+	          window.location.href='https://cz-jam.lanzouj.com/b0by0qi2h';
+	      }
+	      
+	  }
+	  
+	  function Speedtest(){
+	      
+	          window.location.href='https://pvp.qq.com/zlkdatasys/mct/d/play.shtml?device=android';
+	      
+	      
+	  }
+	  
+
